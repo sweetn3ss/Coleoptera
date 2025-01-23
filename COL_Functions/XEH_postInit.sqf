@@ -18,3 +18,12 @@ player ExecVM "COL_Functions\functions\fn_coleopteraEnergy.sqf";
 	[2,64,2,0],
 	1
 ] call CBA_fnc_addSetting;
+
+[ // jetpack energy max amount
+	"coleopteraMaxEnergy",
+	"SLIDER",
+	["Default Max Energy","The maximum amount of energy that a non-config pack can have. Does not require mission restart."],
+	"Coleoptera Settings",
+	[25,250,100,0],
+	1
+] call CBA_fnc_addSetting;
