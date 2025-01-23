@@ -21,7 +21,7 @@ class cfgFunctions {
         class functions { 
             file = "COL_Functions\functions";
             class coleopteraOmni {}; // COL_fnc_coleopteraOmni
-            class coleopteraEnergy {};
+            class coleopteraEnergy {}; // COL_fnc_coleopteraEnergy
         };
     };
     class Keys {
