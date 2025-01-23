@@ -21,6 +21,15 @@ class cfgFunctions {
         class functions { 
             file = "COL_Functions\functions";
             class coleopteraOmni {}; // COL_fnc_coleopteraOmni
+            class coleopteraEnergy {};
         };
     };
+    class Keys {
+		class KeyInt {
+			class colPostInit {
+				file = "COL_Functions\XEH_postInit.sqf";
+				postInit=1;
+			};
+		};
+	};
 };

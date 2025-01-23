@@ -17,6 +17,7 @@ class cfgVehicles {
         scopeArsenal = 2;
         displayName = "[COL] Coleoptera Pack";
         author = "Gray";
+        isColeoptera = 1;
         camoTypes[] = {
             "BLK",
             "DES",
