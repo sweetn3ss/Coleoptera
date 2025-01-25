@@ -3,6 +3,7 @@ _coleopteraMaxEnergy = 100;
 _coleopteraERate = 1;
 _coleopteraEIncrease = 2;
 // systemChat "We ballin.";
+if (!hasInterface) exitWith {};
 while {alive player} do {
     _getPack = backpack player;
     _coleopteraCheck = (configFile >> "cfgVehicles" >> _getPack >> "isColeoptera") call bis_fnc_getCfgDataBool;
