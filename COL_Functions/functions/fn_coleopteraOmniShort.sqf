@@ -1,20 +1,20 @@
 if (!hasInterface) exitWith {};
 _getPack = backpack player;
 _coleopteraCheck = (configFile >> "cfgVehicles" >> _getPack >> "isColeoptera") call bis_fnc_getCfgDataBool;
-_longJumpCost = (configFile >> "CfgVehicles" >> _getPack >> "longJumpCost") call BIS_fnc_getCfgData;
+_shortJumpCost = (configFile >> "CfgVehicles" >> _getPack >> "shortJumpCost") call BIS_fnc_getCfgData;
 if (_coleopteraCheck isEqualTo true) then {
-    if (_longJumpCost < coleopteraEnergy) then {
+    if (_shortJumpCost < coleopteraEnergy) then {
         if (inputAction "MoveForward" > 0) then {
-			player setVelocityModelSpace [0, 16, 20.5];
+			player setVelocityModelSpace [0, 8, 10.25];
 		} else {
 			if (inputAction "MoveBack" > 0) then {
-				player setVelocityModelSpace [0, -16, 20.5];
+				player setVelocityModelSpace [0, -8, 10.25];
 			} else {
 				if (inputAction "TurnRight" > 0) then {
-					player setVelocityModelSpace [16, 0, 20.5];
+					player setVelocityModelSpace [8, 0, 10.25];
 				} else {
 					if (inputAction "TurnLeft" > 0) then {
-						player setVelocityModelSpace [-16, 0, 20.5];
+						player setVelocityModelSpace [-8, 0, 10.25];
 					} else {
 						player setVelocityModelSpace [0, 0, 20.5];
 					};
@@ -22,7 +22,7 @@ if (_coleopteraCheck isEqualTo true) then {
 			};
 		};
         player allowdamage false;
-        coleopteraEnergy = coleopteraEnergy - _longJumpCost;
+        coleopteraEnergy = coleopteraEnergy - _shortJumpCost;
         _Sound = createSoundSource ["COL_JSFX", position player, [], 0];
         _Sound attachto [vehicle player];
         _Smoke1 = "#particlesource" createVehicleLocal [0,0,0];  

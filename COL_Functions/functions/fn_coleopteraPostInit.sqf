@@ -1,3 +1,4 @@
+#include "\a3\editor_f\Data\Scripts\dikCodes.h"
 PlzNoFallMommy = false;
 player ExecVM "COL_Functions\functions\fn_coleopteraEnergy.sqf";
 
@@ -27,3 +28,19 @@ player ExecVM "COL_Functions\functions\fn_coleopteraEnergy.sqf";
 	[25,250,100,0],
 	1
 ] call CBA_fnc_addSetting;
+
+[
+"Coleoptera",
+"colOmniShort",
+"Short Jump with Jetpack",
+{[] execVM "COL_Functions\functions\fn_coleopteraOmniShort.sqf";},
+""
+] call CBA_fnc_addKeybind;
+
+[
+"Coleoptera",
+"colOmniLong",
+"Long Jump with Jetpack",
+{[] execVM "COL_Functions\functions\fn_coleopteraOmni.sqf";},
+""
+] call CBA_fnc_addKeybind;
