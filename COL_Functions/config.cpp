@@ -85,7 +85,7 @@ class ACE_Medical_Injuries {
 };
 class RscTitles
 {
-	class Project_Airborne_Jump_Energy_Bar
+	class Project_Airborne_Jump_Energy
 	{
 		idd=2459;
 		duration=1.#INF;

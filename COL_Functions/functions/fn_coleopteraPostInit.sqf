@@ -16,7 +16,7 @@ player ExecVM "COL_Functions\functions\fn_coleopteraEnergy.sqf";
 	"SLIDER",
 	["Recharge Amount","The amount of energy deposited after the interval defined above. Does not require mission restart."],
 	"Coleoptera Settings",
-	[2,64,2,0],
+	[2,50,2,0],
 	1
 ] call CBA_fnc_addSetting;
 
