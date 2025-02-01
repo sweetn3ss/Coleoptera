@@ -85,11 +85,11 @@ class ACE_Medical_Injuries {
 };
 class RscTitles
 {
-	class Project_Airborne_Jump_Energy
+	class Coleoptera_Energy_Readout
 	{
 		idd=2459;
-		duration=1.#INF;
-		onLoad="uiNamespace setVariable ['Energy', _this select 0]";
+		duration=1e+1000;
+		onLoad="uiNamespace setVariable ['coleopteraEnergy', _this select 0]";
 		class controls
 		{
 			class EnergyDisplayControl
@@ -97,8 +97,8 @@ class RscTitles
 				idc=2460;
 				type=0;
 				style=0;
-				x="safeZoneXAbs + 0.01";
-				y="safeZoneY - 0.30";
+				x=safeZoneXAbs + 0.01;
+				y=safeZoneY - 0.30;
 				w=1;
 				h=1;
 				font="EtelkaNarrowMediumPro";
@@ -112,7 +112,7 @@ class RscTitles
 	class Project_Airborne_Altitude_Bar
 	{
 		idd=2479;
-		duration=1.#INF;
+		duration=1e+1000;
 		onLoad="uiNamespace setVariable ['AltitudeVar', _this select 0]";
 		class controls
 		{

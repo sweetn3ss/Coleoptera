@@ -22,6 +22,7 @@ class cfgVehicles {
         shortJumpCost = 25;
         maxEnergy = 100;
         takeFromConfig = 0;
+        UIcanShow = 1;
         chargeRate = 1; // default settings values
         chargeAmount = 2; // to test these working or not
         camoTypes[] = {
@@ -41,6 +42,7 @@ class cfgVehicles {
         shortJumpCost = 25;
         maxEnergy = 150;
         takeFromConfig = 1;
+        UIcanShow = 1;
         chargeRate = 2;
         chargeAmount = 5;
         camoTypes[] = {

@@ -2,6 +2,7 @@ coleopteraEnergy = 100;
 _coleopteraMaxEnergy = 100;
 _coleopteraERate = 1;
 _coleopteraEIncrease = 2;
+_uiShowing = false;
 // systemChat "We ballin.";
 if (!hasInterface) exitWith {};
 while {alive player} do {
@@ -20,10 +21,19 @@ while {alive player} do {
         };
         if (_coleopteraMaxEnergy > coleopteraEnergy) then {
             coleopteraEnergy = coleopteraEnergy + _coleopteraEIncrease;
+            2459 cutRsc ["Coleoptera_Energy_Readout","PLAIN"];
+        };
+        if (coleopteraEnergy < _coleopteraMaxEnergy) then {
+            if (_uiShowing isEqualTo false) then {
+                uiNameSpace getVariable "coleopteraEnergy" displayCtrl 2460 ctrlSetText "Energy "+str(coleopteraEnergy);
+            };
         };
         if (coleopteraEnergy > _coleopteraMaxEnergy) then { // godawful max charge clamp
             coleopteraEnergy = _coleopteraMaxEnergy;
+            _uiShowing = false;
         };
+    } else {
+        2459 cutText ["", "PLAIN"];
     };
     sleep _coleopteraERate;
 };
