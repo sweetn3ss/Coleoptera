@@ -31,6 +31,7 @@ while {alive player} do {
         if (coleopteraEnergy > _coleopteraMaxEnergy) then { // godawful max charge clamp
             coleopteraEnergy = _coleopteraMaxEnergy;
             _uiShowing = false;
+            2459 cutText ["", "PLAIN"];
         };
     } else {
         2459 cutText ["", "PLAIN"];
