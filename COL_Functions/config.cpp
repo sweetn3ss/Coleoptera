@@ -23,7 +23,7 @@ class cfgFunctions {
             file = "COL_Functions\functions";
             class coleopteraOmni {}; // COL_fnc_coleopteraOmni
             class coleopteraEnergy {}; // COL_fnc_coleopteraEnergy
-            class customWoundHandler {}; // COL_func_customWoundHandler
+            class customWoundHandler {}; // COL_fnc_customWoundHandler
         };
     };
     class COL_Init {
@@ -77,8 +77,8 @@ class ACE_Medical_Injuries {
 	class damageTypes {
         class woundHandlers;
         class falling {
-            class woundHandlers: woundHandlers {
-            COL_Functions = "{call COL_fnc_customWoundHandler;}";
+            class woundHandlers: woundHandlers{
+            	COL_Functions = "{call COL_fnc_customWoundHandler;}";
             };
         };
     };

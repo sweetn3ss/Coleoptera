@@ -1,4 +1,4 @@
-params = ["_unit","_allDamages","_typeOfDamage"];
+params ["_unit","_allDamages","_typeOfDamage"];
 
 
 if (PlzNoFallMommy) then {
