@@ -35,6 +35,19 @@ class cfgFunctions {
         };
     };
 };
+class cfgVehicles {
+	class Man;
+	class CAManBase: Man {
+		class ACE_SelfActions {
+			class Coleoptera_Actions {
+				displayName="Jetpack Config";
+                condition="[_player] call COL_fnc_getPack";
+                statement="";
+                icon = "";
+			};
+		};
+	};
+};
 class CfgSFX
 {
 	class coleopteraJSFX

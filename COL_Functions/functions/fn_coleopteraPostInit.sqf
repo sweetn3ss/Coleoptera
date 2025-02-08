@@ -1,6 +1,8 @@
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 PlzNoFallMommy = false;
 player ExecVM "COL_Functions\functions\fn_coleopteraEnergy.sqf";
+_longJumpType = "Vector";
+_shortJumpType = "Omni";
 
 [ // jetpack energy recharge time
 	"coleopteraERate",
