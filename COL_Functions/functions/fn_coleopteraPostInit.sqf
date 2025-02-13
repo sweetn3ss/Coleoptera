@@ -1,13 +1,19 @@
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 PlzNoFallMommy = false;
+//missionNamespace setVariable ["PlzNoFallMommy","false"];
+col_action_check = false;
 player ExecVM "COL_Functions\functions\fn_coleopteraEnergy.sqf";
-_longJumpType = "Vector";
-_shortJumpType = "Omni";
+player setVariable ["colJumpTypeLong","Omni"];
+player setVariable ["colJumpTypeShort","Omni"];
+//colJumpTypeLong = "Omni";
+//colJumpTypeShort = "Omni";
+player setVariable ["colSoundPack","COL_JSFX0"];
+// colSoundPack = "COL_JSFX0";
 
 [ // jetpack energy recharge time
 	"coleopteraERate",
 	"SLIDER",
-	["Recharge Interval","The interval in seconds between energy deposits into the player's pool. May require mission restart."],
+	["Recharge Interval","The interval in seconds between energy deposits into the player's pool. Does not require mission restart."],
 	"Coleoptera Settings",
 	[1,5,1,0],
 	1
@@ -31,11 +37,19 @@ _shortJumpType = "Omni";
 	1
 ] call CBA_fnc_addSetting;
 
+[ // jetpack sound changes allowed
+	"coleopteraAllowSound",
+	"CHECKBOX",
+	["Allow Changing Sounds?","Whether players should be able to change their sound pack. Should not require mission restart."],
+	"Coleoptera Settings",
+	true
+] call CBA_fnc_addSetting;
+
 [
 "Coleoptera",
 "colOmniShort",
 "Short Jump with Jetpack",
-{[] execVM "COL_Functions\functions\fn_coleopteraOmniShort.sqf";},
+{[_player] execVM "COL_Functions\functions\fn_shortSwitch.sqf";},
 ""
 ] call CBA_fnc_addKeybind;
 
@@ -43,6 +57,6 @@ _shortJumpType = "Omni";
 "Coleoptera",
 "colOmniLong",
 "Long Jump with Jetpack",
-{[] execVM "COL_Functions\functions\fn_coleopteraOmni.sqf";},
+{[_player] execVM "COL_Functions\functions\fn_longSwitch.sqf";},
 ""
 ] call CBA_fnc_addKeybind;

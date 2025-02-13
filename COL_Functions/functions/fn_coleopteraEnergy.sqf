@@ -10,6 +10,7 @@ while {alive player} do {
     _coleopteraCheck = (configFile >> "cfgVehicles" >> _getPack >> "isColeoptera") call bis_fnc_getCfgDataBool;
     if (_coleopteraCheck isEqualTo true) then {
         _fromConfigCheck = (configFile >> "cfgVehicles" >> _getPack >> "takeFromConfig") call bis_fnc_getCfgDataBool;
+        col_action_check = true;
         if (_fromConfigCheck isEqualTo true) then {
             _coleopteraMaxEnergy = (configFile >> "cfgVehicles" >> _getPack >> "maxEnergy") call bis_fnc_getCfgData;
             _coleopteraERate = (configFile >> "cfgVehicles" >> _getPack >> "chargeRate") call bis_fnc_getCfgData;
@@ -35,6 +36,7 @@ while {alive player} do {
         };
     } else {
         2459 cutText ["", "PLAIN"];
+        col_action_check = false;
     };
     sleep _coleopteraERate;
 };
