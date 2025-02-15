@@ -22,6 +22,8 @@ class cfgFunctions {
         class functions { 
             file = "COL_Functions\functions";
             class coleopteraOmni {}; // COL_fnc_coleopteraOmni
+			class coleopteraOmniShort {};
+			class coleopteraDashShort {};
             class coleopteraEnergy {}; // COL_fnc_coleopteraEnergy
             class customWoundHandler {}; // COL_fnc_customWoundHandler
 			class shortSwitch {}; // COL_fnc_shortSwitch
@@ -128,13 +130,19 @@ class CfgVehicles
 						displayName="Vector";
 						condition="";
 						statement="[_player,""Vector""] call COL_fnc_shortChange;";
-						icon="";
+						icon="COL_Functions\ui\vector.paa";
 					};
 					class ColeopteraShortO {
 						displayName="Directional";
 						condition="";
 						statement="[_player,""Omni""] call COL_fnc_shortChange;";
-						icon="";
+						icon="COL_Functions\ui\directional.paa";
+					};
+					class ColeopteraShortD {
+						displayName="Dash";
+						condition="";
+						statement="[_player,""Dash""] call COL_fnc_shortChange;";
+						icon="COL_Functions\ui\directional.paa";
 					};
 				};
 				class ColeopteraLongType {
@@ -146,13 +154,13 @@ class CfgVehicles
 						displayName="Vector";
 						condition="";
 						statement="[_player,""Vector""] call COL_fnc_longChange;";
-						icon="";
+						icon="COL_Functions\ui\vector.paa";
 					};
 					class ColeopteraLongO {
 						displayName="Directional";
 						condition="";
 						statement="[_player,""Omni""] call COL_fnc_longChange;";
-						icon="";
+						icon="COL_Functions\ui\directional.paa";
 					};
 				};
 				class ColeopteraSoundPack {
