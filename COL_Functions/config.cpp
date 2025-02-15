@@ -118,12 +118,12 @@ class CfgVehicles
 				displayName="Jetpack Settings";
                 condition="col_action_check";
                 statement="";
-                icon = "";
+                icon = "\COL_Functions\ui\menu1.paa";
 				class ColeopteraShortType {
 					displayName="Short Jump Type";
 					condition="";
 					statement="";
-					icon="";
+					icon="\COL_Functions\ui\short0.paa";
 					class ColeopteraShortV {
 						displayName="Vector";
 						condition="";
@@ -141,7 +141,7 @@ class CfgVehicles
 					displayName="Long Jump Type";
 					condition="";
 					statement="";
-					icon="";
+					icon="\COL_Functions\ui\long0.paa";
 					class ColeopteraLongV {
 						displayName="Vector";
 						condition="";
@@ -159,20 +159,20 @@ class CfgVehicles
 					displayName="Sound Pack";
 					condition="coleopteraAllowSound";
 					statement="";
-					icon="";
+					icon="\COL_Functions\ui\sound0.paa";
 					class ColeopteraSoundClassic {
 						displayName="Classic";
 						condition="";
 						//statement="player setVariable ["colSoundPack","COL_JSFX0"];";
 						statement="[_player,""COL_JSFX0""] call COL_fnc_soundChange;";
-						icon="";
+						icon="COL_Functions\ui\classic0.paa";
 					};
 					class ColeopteraSoundFresh {
 						displayName="Fresh";
 						condition="";
 						//statement="player setVariable ["colSoundPack","COL_JSFX1"];;";
 						statement="[_player,""COL_JSFX1""] call COL_fnc_soundChange;";
-						icon="";
+						icon="COL_Functions\ui\fresh0.paa";
 					};
 				};
 			};
