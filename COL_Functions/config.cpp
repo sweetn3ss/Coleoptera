@@ -31,6 +31,7 @@ class cfgFunctions {
 			class soundChange {}; // COL_fnc_soundChange
 			class shortChange {}; // COL_fnc_shortChange
 			class longChange {}; // COL_fnc_longChange
+			class useBattery {}; // COL_fnc_useBattery
         };
     };
     class COL_Init {
@@ -116,6 +117,14 @@ class CfgVehicles
 	class Man;
 	class CAManBase: Man {
 		class ACE_SelfActions {
+			class ACE_Equipment {
+				class COL_batteryUse {
+					displayName="Recharge Jetpack";
+					condition="[_player,'COL_battery'] call ace_common_fnc_hasItem";
+					icon="";
+					statement="[_player,'COL_battery'] call COL_fnc_useBattery";
+				};
+			};
 			class Coleoptera_Actions {
 				displayName="Jetpack Settings";
                 condition="col_action_check";
@@ -142,7 +151,7 @@ class CfgVehicles
 						displayName="Dash";
 						condition="";
 						statement="[_player,""Dash""] call COL_fnc_shortChange;";
-						icon="COL_Functions\ui\directional.paa";
+						icon="COL_Functions\ui\dash0.paa";
 					};
 				};
 				class ColeopteraLongType {

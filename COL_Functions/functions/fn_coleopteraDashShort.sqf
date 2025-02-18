@@ -16,7 +16,7 @@ if (_coleopteraCheck isEqualTo true) then {
 					if (inputAction "TurnLeft" > 0) then {
 						player setVelocityModelSpace [-8, 0, 5];
 					} else {
-						player setVelocityModelSpace [0, 8, 5];
+						player setVelocityModelSpace [0, 12, 8];
 					};
 				};
 			};

@@ -24,7 +24,7 @@ while {alive player} do {
             coleopteraEnergy = coleopteraEnergy + _coleopteraEIncrease;
             2459 cutRsc ["Coleoptera_Energy_Readout","PLAIN"];
         };
-        if (coleopteraEnergy < _coleopteraMaxEnergy) then {
+        if (coleopteraEnergy < _coleopteraMaxEnergy && {_coleopteraERate != 0}) then {
             if (_uiShowing isEqualTo false) then {
                 uiNameSpace getVariable "coleopteraEnergy" displayCtrl 2460 ctrlSetText "Energy "+str(coleopteraEnergy);
             };

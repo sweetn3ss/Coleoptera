@@ -47,7 +47,7 @@ player setVariable ["colSoundPack","COL_JSFX0"];
 
 [
 "Coleoptera",
-"colOmniShort",
+"colJumpShort",
 "Short Jump with Jetpack",
 {[_player] execVM "COL_Functions\functions\fn_shortSwitch.sqf";},
 ""
@@ -55,7 +55,7 @@ player setVariable ["colSoundPack","COL_JSFX0"];
 
 [
 "Coleoptera",
-"colOmniLong",
+"colJumpLong",
 "Long Jump with Jetpack",
 {[_player] execVM "COL_Functions\functions\fn_longSwitch.sqf";},
 ""
