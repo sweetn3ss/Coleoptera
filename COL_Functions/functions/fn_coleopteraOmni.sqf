@@ -24,7 +24,7 @@ if (_coleopteraCheck isEqualTo true) then {
         PlzNoFallMommy = true;
         coleopteraEnergy = coleopteraEnergy - _longJumpCost;
         //private _colSoundPack = player getVariable "colSoundPack";
-        _Sound = createSoundSource [(player getVariable "colSoundPack"), position player, [], 0];
+        _Sound = createSoundSource [(player getVariable "colSoundPack"), getPosASL player, [], 0];
         _Sound attachto [vehicle player];
         _Smoke1 = "#particlesource" createVehicleLocal [0,0,0];  
         _Smoke1 setParticleClass "Flare1";  
