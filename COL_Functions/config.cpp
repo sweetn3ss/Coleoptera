@@ -122,7 +122,7 @@ class CfgVehicles
 					displayName="Recharge Jetpack";
 					condition="[_player,'COL_battery'] call ace_common_fnc_hasItem";
 					icon="";
-					statement="[_player,'COL_battery'] call COL_fnc_useBattery";
+					statement="[_player,'COL_battery'] execVM 'COL_Functions\functions\fn_useBattery.sqf'";
 				};
 			};
 			class Coleoptera_Actions {

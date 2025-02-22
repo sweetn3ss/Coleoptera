@@ -21,7 +21,7 @@ if (_coleopteraCheck isEqualTo true) then {
 				};
 			};
 		};
-        player allowdamage false;
+        PlzNoFallMommy = true;
         coleopteraEnergy = coleopteraEnergy - _longJumpCost;
         //private _colSoundPack = player getVariable "colSoundPack";
         _Sound = createSoundSource [(player getVariable "colSoundPack"), position player, [], 0];
@@ -45,6 +45,6 @@ if (_coleopteraCheck isEqualTo true) then {
         deleteVehicle _Sparks1;
         deleteVehicle _Sparks2;
         deleteVehicle _Sound;
-        player allowdamage true;
+        PlzNoFallMommy = false;
     };
 };

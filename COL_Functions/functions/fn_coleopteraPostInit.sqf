@@ -45,6 +45,15 @@ player setVariable ["colSoundPack","COL_JSFX0"];
 	true
 ] call CBA_fnc_addSetting;
 
+[ // jetpack battery amount of charge
+	"coleopteraBatteryAmount",
+	"SLIDER",
+	["Battery Recharge Amount","The maximum recharge a battery can supply. Does not require mission restart."],
+	"Coleoptera Settings",
+	[25,250,100,0],
+	1
+] call CBA_fnc_addSetting;
+
 [
 "Coleoptera",
 "colJumpShort",

@@ -20,7 +20,6 @@ class cfgWeapons {
 		scopeArsenal=2;
         displayName = "[COL] Quick-Charge Capacitor";
 		descriptionShort = "Capacitor for charging the Coleoptera battery.";
-		batteryCapacity = 100;
         model = "COL_Gear\data\items\capacitor.p3d";
 		detectRange = -1;
 		simulation = "ItemMineDetector";
