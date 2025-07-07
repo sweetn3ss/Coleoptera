@@ -2,6 +2,8 @@ if (!hasInterface) exitWith {};
 _getPack = backpack player;
 _coleopteraCheck = (configFile >> "cfgVehicles" >> _getPack >> "isColeoptera") call bis_fnc_getCfgDataBool;
 _shortJumpCost = (configFile >> "CfgVehicles" >> _getPack >> "shortJumpCost") call BIS_fnc_getCfgData;
+_packCanSwap = (configFile >> "CfgVehicles" >> _getPack >> "colCanOpen") call BIS_fnc_getCfgDataBool;
+private _swappedBag = false;
 if (_coleopteraCheck isEqualTo true) then {
     if (_shortJumpCost < coleopteraEnergy) then {
         if (inputAction "MoveForward" > 0) then {
@@ -21,6 +23,12 @@ if (_coleopteraCheck isEqualTo true) then {
 				};
 			};
 		};
+        if (_packCanSwap) then {
+            _swappedBag = true;
+            _packSwapOpen = (configFile >> "CfgVehicles" >> _getPack >> "colOpenBag") call BIS_fnc_getCfgData;
+            removeBackpack player;
+            player addBackpack _packSwapOpen;
+        };
         PlzNoFallMommy = true;
         coleopteraEnergy = coleopteraEnergy - _shortJumpCost;
         //private _colSoundPack = player getVariable colSoundPack;
@@ -46,5 +54,11 @@ if (_coleopteraCheck isEqualTo true) then {
         deleteVehicle _Sparks2;
         deleteVehicle _Sound;
         PlzNoFallMommy = false;
+        if (_swappedBag) then {
+            _getPack2 = backpack player;
+            _packSwapClose = (configFile >> "CfgVehicles" >> _getPack2 >> "colClosedBag") call BIS_fnc_getCfgData;
+            removeBackpack player;
+            player addBackpack _packSwapClose;
+        };
     };
 };

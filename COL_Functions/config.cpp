@@ -136,7 +136,7 @@ class CfgVehicles
 					statement="";
 					icon="\COL_Functions\ui\short0.paa";
 					class ColeopteraShortV {
-						displayName="Vector";
+						displayName="DOESNT DO ANYTHING";
 						condition="";
 						statement="[_player,""Vector""] call COL_fnc_shortChange;";
 						icon="COL_Functions\ui\vector.paa";
@@ -160,7 +160,7 @@ class CfgVehicles
 					statement="";
 					icon="\COL_Functions\ui\long0.paa";
 					class ColeopteraLongV {
-						displayName="Vector";
+						displayName="DOESNT DO ANYTHING";
 						condition="";
 						statement="[_player,""Vector""] call COL_fnc_longChange;";
 						icon="COL_Functions\ui\vector.paa";

@@ -69,3 +69,13 @@ player setVariable ["colSoundPack","COL_JSFX0"];
 {[_player] execVM "COL_Functions\functions\fn_longSwitch.sqf";},
 ""
 ] call CBA_fnc_addKeybind;
+
+/*
+[
+"Coleoptera",
+"colAirbrake",
+"Midair Stop with Jetpack",
+{[_player] execVM "COL_Functions\functions\fn_airbrake.sqf";},
+""
+] call CBA_fnc_addKeybind;
+*/
