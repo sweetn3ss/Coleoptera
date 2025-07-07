@@ -70,7 +70,6 @@ player setVariable ["colSoundPack","COL_JSFX0"];
 ""
 ] call CBA_fnc_addKeybind;
 
-/*
 [
 "Coleoptera",
 "colAirbrake",
@@ -78,4 +77,3 @@ player setVariable ["colSoundPack","COL_JSFX0"];
 {[_player] execVM "COL_Functions\functions\fn_airbrake.sqf";},
 ""
 ] call CBA_fnc_addKeybind;
-*/
