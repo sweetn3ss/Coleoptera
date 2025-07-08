@@ -54,6 +54,42 @@ player setVariable ["colSoundPack","COL_JSFX0"];
 	1
 ] call CBA_fnc_addSetting;
 
+[ // jetpack vector long mod
+	"coleopteraYeetStrength",
+	"SLIDER",
+	["Vector Long Jump Strength","The vector multiplier for long jump distance. Should not require mission restart."],
+	["Coleoptera Settings","Jump Settings"],
+	[5,50,20,0],
+	1
+] call CBA_fnc_addSetting;
+
+[ // jetpack vector long up mod
+	"coleopteraUpBoost",
+	"SLIDER",
+	["Vector Long Jump Up Mod","The vertical compensation for vector long jump. Should not require mission restart."],
+	["Coleoptera Settings","Jump Settings"],
+	[0,10,5,0],
+	1
+] call CBA_fnc_addSetting;
+
+[ // jetpack vector short mod
+	"coleopteraYeetStrengthShort",
+	"SLIDER",
+	["Vector Short Jump Strength","The vector multiplier for long jump distance. Should not require mission restart."],
+	["Coleoptera Settings","Jump Settings"],
+	[5,50,10,0],
+	1
+] call CBA_fnc_addSetting;
+
+[ // jetpack vector short up mod
+	"coleopteraUpBoostShort",
+	"SLIDER",
+	["Vector Short Jump Up Mod","The vertical compensation for vector long jump. Should not require mission restart."],
+	["Coleoptera Settings","Jump Settings"],
+	[0,10,2,0],
+	1
+] call CBA_fnc_addSetting;
+
 [
 "Coleoptera",
 "colJumpShort",

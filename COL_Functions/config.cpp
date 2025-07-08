@@ -32,6 +32,7 @@ class cfgFunctions {
 			class shortChange {}; // COL_fnc_shortChange
 			class longChange {}; // COL_fnc_longChange
 			class useBattery {}; // COL_fnc_useBattery
+			class airbrake {}; // COL_fnc_airbrake
         };
     };
     class COL_Init {
@@ -136,7 +137,7 @@ class CfgVehicles
 					statement="";
 					icon="\COL_Functions\ui\short0.paa";
 					class ColeopteraShortV {
-						displayName="DOESNT DO ANYTHING";
+						displayName="Vector";
 						condition="";
 						statement="[_player,""Vector""] call COL_fnc_shortChange;";
 						icon="COL_Functions\ui\vector.paa";
@@ -160,7 +161,7 @@ class CfgVehicles
 					statement="";
 					icon="\COL_Functions\ui\long0.paa";
 					class ColeopteraLongV {
-						displayName="DOESNT DO ANYTHING";
+						displayName="Vector";
 						condition="";
 						statement="[_player,""Vector""] call COL_fnc_longChange;";
 						icon="COL_Functions\ui\vector.paa";
