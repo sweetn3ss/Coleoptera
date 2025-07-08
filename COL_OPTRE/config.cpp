@@ -69,6 +69,7 @@ class cfgVehicles {
         chargeRate = 1; // default settings values
         chargeAmount = 2; // to test these working or not
         colOpenBag = "COL_Backpack_Spartan_Jetpack_On";
+        maximumLoad = 250;
     };
     class COL_Backpack_Spartan_Jetpack_On: OPTRE_S12_SOLA_Jetpack_On_Spartan {
         scope = 1;
@@ -85,5 +86,6 @@ class cfgVehicles {
         chargeRate = 1; // default settings values
         chargeAmount = 2; // to test these working or not
         colClosedBag = "COL_Backpack_Spartan_Jetpack";
+        maximumLoad = 250;
     };
 };
