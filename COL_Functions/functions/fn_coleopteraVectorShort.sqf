@@ -19,10 +19,12 @@ if (_coleopteraCheck isEqualTo true) then {
 
         player setVelocity _velocity;
         if (_packCanSwap) then {
+            _bagItems = backpackItems player;
             _swappedBag = true;
             _packSwapOpen = (configFile >> "CfgVehicles" >> _getPack >> "colOpenBag") call BIS_fnc_getCfgData;
             removeBackpack player;
             player addBackpack _packSwapOpen;
+            {player addItemToBackpack _x} forEach _bagItems;
         };
         PlzNoFallMommy = true;
         coleopteraEnergy = coleopteraEnergy - _shortJumpCost;
@@ -50,10 +52,12 @@ if (_coleopteraCheck isEqualTo true) then {
         deleteVehicle _Sound;
         PlzNoFallMommy = false;
         if (_swappedBag) then {
+            _bagItems = backpackItems player;
             _getPack2 = backpack player;
             _packSwapClose = (configFile >> "CfgVehicles" >> _getPack2 >> "colClosedBag") call BIS_fnc_getCfgData;
             removeBackpack player;
             player addBackpack _packSwapClose;
+            {player addItemToBackpack _x} forEach _bagItems;
         };
     };
 };

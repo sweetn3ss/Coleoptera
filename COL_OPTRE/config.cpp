@@ -34,6 +34,7 @@ class cfgVehicles {
         chargeAmount = 2; // to test these working or not
         colCanOpen = 1;
         colOpenBag = "COL_Backpack_OPTRE_Jetpack_On";
+        maximumLoad = 250;
     };
     class COL_Backpack_OPTRE_Jetpack_On: OPTRE_S12_SOLA_Jetpack_On {
         scope = 1;
@@ -50,6 +51,7 @@ class cfgVehicles {
         chargeRate = 1; // default settings values
         chargeAmount = 2; // to test these working or not
         colClosedBag = "COL_Backpack_OPTRE_Jetpack";
+        maximumLoad = 250;
     };
 
     // spartan people size

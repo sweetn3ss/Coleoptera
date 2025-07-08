@@ -98,6 +98,32 @@ class CfgSFX
 			0
 		};
 	};
+	class coleopteraJSFXA
+	{
+		sound0[]=
+		{
+			"COL_Functions\sfx\airbrake.ogg",
+			250,
+			1,
+			25,
+			1,
+			0,
+			0,
+			5
+		};
+		sounds[]={"sound0"};
+		empty[]=
+		{
+			"",
+			0,
+			0,
+			0,
+			0,
+			0,
+			0,
+			0
+		};
+	};
 };
 class CfgVehicles
 {
@@ -113,6 +139,12 @@ class CfgVehicles
         scope=1;
         side=1;
 		sound="coleopteraJSFX1";
+		vehicleClass="Sounds";
+	};
+	class COL_JSFXA {
+		scope=1;
+		side=1;
+		sound="coleopteraJSFXA";
 		vehicleClass="Sounds";
 	};
 	class Man;
