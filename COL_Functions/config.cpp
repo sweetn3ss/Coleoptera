@@ -33,6 +33,8 @@ class cfgFunctions {
 			class longChange {}; // COL_fnc_longChange
 			class useBattery {}; // COL_fnc_useBattery
 			class airbrake {}; // COL_fnc_airbrake
+			class saveBackpackInv {};
+			class loadBackpackInv {};
         };
     };
     class COL_Init {

@@ -5,7 +5,7 @@ switch (_colJumpTypeShort) do {
     case "omni": {player execVM "COL_Functions\functions\fn_coleopteraOmniShort.sqf";};
     case "vector": {player execVM "COL_Functions\functions\fn_coleopteraVectorShort.sqf";};
     case "dash": {player execVM "COL_Functions\functions\fn_coleopteraDashShort.sqf"};
-    case default {
+    default {
         hint parseText "<t color=#ff0000>INVALID JUMP TYPE</t>\nCONSULT SUICIDE BOOTH FOR FURTHER INFORMATION"
     };
 };
