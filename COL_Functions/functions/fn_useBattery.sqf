@@ -3,7 +3,6 @@
 	10, // time in seconds
 	{alive player;}, // condition
 	{
-		_batteryClass = 
 		player removeItem "COL_battery";
         coleopteraEnergy = coleopteraEnergy + coleopteraBatteryAmount;
 	}, // script on success
