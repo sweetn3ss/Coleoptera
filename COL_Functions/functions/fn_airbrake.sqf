@@ -6,6 +6,7 @@ if (_coleopteraCheck isEqualTo true) then {
     _stopVel = (velocityModelSpace player) vectorMultiply 0.15;
     player setVelocityModelSpace _stopVel;
     coleopteraEnergy = coleopteraEnergy - _shortJumpCost;
+    if (coleopteraEnergy < 0) then { coleopteraEnergy = 0 };
     _SoundStop = createSoundSource ["coleopteraJSFXA", getPosASL player, [], 0];
     _SoundStop attachto [vehicle player];
     waitUntil { istouchingground player };
