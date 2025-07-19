@@ -29,8 +29,8 @@ if (_coleopteraCheck isEqualTo true) then {
         PlzNoFallMommy = true;
         coleopteraEnergy = coleopteraEnergy - _longJumpCost;
         //private _colSoundPack = player getVariable "colSoundPack";
-        _Sound = createSoundSource [(player getVariable "colSoundPack"), getPosASL player, [], 0];
-        _Sound attachto [vehicle player];
+        _Sound = playSound3D ["COL_Functions\sfx\SLACKJAWBESTSOUNDENGINEER.wav", player, false];
+        //_Sound attachto [vehicle player];
         _Smoke1 = "#particlesource" createVehicleLocal [0,0,0];  
         _Smoke1 setParticleClass "Flare1";  
         _Smoke1 attachto [vehicle player,[0.225,-0.1,1.5]]; 
@@ -49,7 +49,7 @@ if (_coleopteraCheck isEqualTo true) then {
         deleteVehicle _Smoke2;
         deleteVehicle _Sparks1;
         deleteVehicle _Sparks2;
-        deleteVehicle _Sound;
+        //deleteVehicle _Sound;
         PlzNoFallMommy = false;
         if (_swappedBag) then {
             _bagItems = backpackItems player;

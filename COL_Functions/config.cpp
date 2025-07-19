@@ -209,7 +209,7 @@ class CfgVehicles
 				};
 				class ColeopteraSoundPack {
 					displayName="Sound Pack";
-					condition="coleopteraAllowSound";
+					condition="false";
 					statement="";
 					icon="\COL_Functions\ui\sound0.paa";
 					class ColeopteraSoundClassic {
